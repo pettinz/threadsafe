@@ -62,7 +62,7 @@ namespace threadsafe
             std::lock_guard<std::mutex> lock(mutex_);
             std::queue<T> tmp = std::move(q);
             q = std::move(queue_);
-            queue_ = std::move(tmp) :
+            queue_ = std::move(tmp);
         }
     };
 } // namespace threadsafe
