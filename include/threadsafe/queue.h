@@ -56,6 +56,14 @@ namespace threadsafe
 
             return tmp;
         }
+
+        void swap(std::queue<T> &q)
+        {
+            std::lock_guard<std::mutex> lock(mutex_);
+            std::queue<T> tmp = std::move(q);
+            q = std::move(queue_);
+            queue_ = std::move(tmp) :
+        }
     };
 } // namespace threadsafe
 
