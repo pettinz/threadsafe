@@ -41,7 +41,7 @@ namespace threadsafe
 
         void push(const T &item)
         {
-            std::lock_guard<std::mutex>(mutex_);
+            std::lock_guard<std::mutex> lock(mutex_);
             queue_.push(item);
         }
 
