@@ -8,7 +8,8 @@ project(
 
 find_package(Doxygen)
 if (Doxygen_FOUND)
-    add_subdirectory(docs)
+    message(STATUS "Doxygen found, documentation will be generated.")
+    # add_subdirectory(docs)
 else()
     message(STATUS "Doxygen not found, documentation will not be generated.")
 endif()
