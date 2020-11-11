@@ -37,7 +37,7 @@ namespace threadsafe
             return queue_.size();
         }
 
-        inline bool empty() const { queue_.empty(); }
+        inline bool empty() const { return queue_.empty(); }
 
         void push(const T &item)
         {
