@@ -6,10 +6,12 @@ project(
   DESCRIPTION "Thread-safe management"
   LANGUAGES CXX)
 
+find_package(Threads REQUIRED)
+
 find_package(Doxygen)
 if (Doxygen_FOUND)
     message(STATUS "Doxygen found, documentation will be generated.")
-    # add_subdirectory(docs)
+    add_subdirectory(docs)
 else()
     message(STATUS "Doxygen not found, documentation will not be generated.")
 endif()
